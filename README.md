@@ -25,11 +25,13 @@ See the [examples](#examples) for how to use it
 
 ## Examples
 
+Or see [this workflow](https://github.com/pawndev/go-modfile-information/blob/main/.github/workflows/go.yml)
+
 ```yaml
     ...
     - name: Get go mod info
       id: gomod
-      uses: pawndev/go-modfile-information@v1
+      uses: pawndev/go-modfile-information@v1.0.0
       with:
         modfile: go.mod # optional default to `go.mod`
     - name: Print go mod information
