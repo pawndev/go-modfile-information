@@ -1,6 +1,9 @@
 name: "Go modfile information"
 description: "Get all go modfile information"
 author: "Christophe Coquelet <pawndev>"
+branding:
+  icon: package
+  color: green
 inputs:
   modfile:
     description: "Path to the go modfile"
