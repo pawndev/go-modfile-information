@@ -1,16 +1,16 @@
 name: Integration Test
 on: [push]
 jobs:
-  build:
+  integration:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - name: Self test
         id: selftest
-
-        # Put your action repo here
-        uses: jacobtomlinson/go-container-action@master
-
+        uses: ./
+        with:
+          modfile: go.mod
       - name: Check outputs
         run: |
-          test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
+          test "${{ steps.selftest.outputs.go_version }}" == "1.20"
+          test "${{ steps.selftest.outputs.go_module }}" == "github.com/pawndev/go-modfile-information"
