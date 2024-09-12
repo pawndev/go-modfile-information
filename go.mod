@@ -1,10 +1,10 @@
 module github.com/pawndev/go-modfile-information
 
-go 1.20
+go 1.22.0
+
+toolchain go1.23.0
 
 require (
-	github.com/sethvargo/go-githubactions v1.1.0
-	golang.org/x/mod v0.9.0
+	github.com/sethvargo/go-githubactions v1.3.0
+	golang.org/x/mod v0.21.0
 )
-
-require github.com/sethvargo/go-envconfig v0.8.0 // indirect

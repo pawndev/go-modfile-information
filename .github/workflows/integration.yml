@@ -12,5 +12,5 @@ jobs:
           modfile: go.mod
       - name: Check outputs
         run: |
-          test "${{ steps.selftest.outputs.go_version }}" == "1.20"
+          test "${{ steps.selftest.outputs.go_version }}" == "1.22.0"
           test "${{ steps.selftest.outputs.go_module }}" == "github.com/pawndev/go-modfile-information"
