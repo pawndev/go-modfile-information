@@ -12,14 +12,14 @@ See the [examples](#examples) for how to use it
 
 ### Inputs
 
-| Input                       | Description                     | Default value |
-|-----------------------------|---------------------------------|---------------|
-| `modfile`                   | An example mandatory input      | go.mod        |
+| Input     | Description                | Default value |
+| --------- | -------------------------- | ------------- |
+| `modfile` | An example mandatory input | go.mod        |
 
 ### Outputs
 
 | Output       | Description              |
-|--------------|--------------------------|
+| ------------ | ------------------------ |
 | `go_version` | Go version of the module |
 | `go_module`  | Go module name           |
 
@@ -51,3 +51,5 @@ with:
 
 Be sure to have [act](https://github.com/nektos/act) locally and available il your `$PATH`.
 And then you can `make test` to launch the project locally.
+
+Folder `tests` contains another go.mod file with old version format using only major and minor without the patch number `1.21`.

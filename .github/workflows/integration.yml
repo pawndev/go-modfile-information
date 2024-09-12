@@ -14,3 +14,12 @@ jobs:
         run: |
           test "${{ steps.selftest.outputs.go_version }}" == "1.22.0"
           test "${{ steps.selftest.outputs.go_module }}" == "github.com/pawndev/go-modfile-information"
+      - name: Self test two digits format
+        id: selftest_two_digits
+        uses: ./
+        with:
+          modfile: tests/two-digits.go.mod
+      - name: Check outputs
+        run: |
+          test "${{ steps.selftest_two_digits.outputs.go_version }}" == "1.21"
+          test "${{ steps.selftest_two_digits.outputs.go_module }}" == "github.com/pawndev/go-modfile-information"
